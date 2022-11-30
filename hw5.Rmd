@@ -138,4 +138,4 @@ ggplotly(fig4)
 <br>
 
 ## Conclusion
-Based on the above data exploration and graphs, no clear pattern shows that UPF consumption is associated with obesity or T2DM. One reason can be the number of participants is limited. 
+Based on the above data exploration and graphs, no clear pattern shows that UPF consumption is associated with obesity or T2DM, indicated by BMI and glucose related variables. One reason can be the number of participants is limited. 
