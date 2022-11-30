@@ -89,15 +89,20 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
   labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI") +
   geom_smooth(method = lm, se = FALSE)
 
-fig2 <- vars %>%
-  ggplot(aes(x = BMI_cont, fill = UPF_quart)) +
-  geom_histogram(position = "identity", alpha = 0.5) +
-  labs(title = "Fig2: BMI by UPF Quartiles", x = "BMI", fill = "UPF Quartile")
+fig2 <- ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
+  geom_line () +
+  geom_smooth () +
+  labs(title = "Fig2: Smooth the lineplot of UPF vs. BMI", x = "UPF%", y = "BMI") 
 
 fig3 <- vars %>%
+  ggplot(aes(x = BMI_cont, fill = UPF_quart)) +
+  geom_histogram(position = "identity", alpha = 0.5) +
+  labs(title = "Fig3: BMI by UPF Quartiles", x = "BMI", fill = "UPF Quartile")
+
+fig4 <- vars %>%
   ggplot(aes(x = UPF_BMI, fill = UPF_quart)) +
   geom_bar() +
-  labs(title = "Fig3: UPF binary and BMI combined by UPF Quartiles", x = "UPF_BMI", fill = "UPF Quartile")
+  labs(title = "Fig4: UPF binary and BMI combined by UPF Quartiles", x = "UPF_BMI", fill = "UPF Quartile")
 ```
 
 <br>
@@ -106,9 +111,9 @@ fig3 <- vars %>%
 
 I created tabs to display each figure using the library ggplotly.
 
-The scatterplot Figure1 shows the association between UPF% and BMI. The plot does not show a trend of UPF% on BMI. 
-The histogram Figure2 BMI by UPF% shows that subjects who consumed 0-25% UPF had a pattern with right skewed, while subjects who consumed greater than 25% UPF showed no specific pattern. 
-The barchart Figure3 shows in another way that most subjects consumed low amount of UPFs were either overweight or obese. 
+The scatterplot Figure1 and smoothed lineplot Figure2 show the association between UPF% and BMI. The plot does not show a trend of UPF% on BMI. 
+The histogram Figure3 BMI by UPF% shows that subjects who consumed 0-25% UPF had a pattern with right skewed, while subjects who consumed greater than 25% UPF showed no specific pattern. 
+The barchart Figure4 shows in another way that most subjects consumed low amount of UPFs were either overweight or obese. 
 
 ### Fig1
 ```{r fig1}
@@ -123,6 +128,11 @@ ggplotly(fig2)
 ### Fig3
 ```{r fig3}
 ggplotly(fig3)
+```
+
+### Fig4
+```{r fig4}
+ggplotly(fig4)
 ```
 
 <br>

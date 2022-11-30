@@ -155,12 +155,17 @@ knitr::kable(table4)
 
 Figure 1 to 3 shows UPF% vs BMI, fasting glucose, and blood glucose after 120 minutes correspondingly. None of the plots show a trend of UPF% on those variables interested in. 
 
-```{r, scatterplots of UPF_cont vs BMI_cont, Gluc_Fasting, Gluc_120min}
+```{r, scatterplots and smoothed slineplots of UPF_cont vs BMI_cont, Gluc_Fasting, Gluc_120min}
 
 ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
   geom_point() +
   labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI") + 
   geom_smooth(method = lm, se = FALSE)
+
+ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
+  geom_line () +
+  geom_smooth () +
+  labs(title = "Fig2: Smooth the lineplot of UPF vs. BMI", x = "UPF%", y = "BMI") 
 
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_point() +
