@@ -19,12 +19,12 @@ The pdf version of the Final Project can be found at: https://github.com/marylee
 
 <br>
 
-## Introduction
+## Introduction 
 In the United States, more than half of the total dietary energy consumption has been composed by ultra-processed foods (UPFs). Most UPFs are calorie-dense and high in sugar, salt, and unhealthy fats, while low in protein, vitamins, and minerals. Studies have demonstrated that the increased consumption of UPFs could result in a poor nutritional quality of the overall diet and high chances of developing chronic diseases. Therefore, the aim of the study focuses on exploring the association between UPF consumption and  obesity and type 2 diabetes (T2DM) among young adults. 
 
 <br>
 
-## Method
+## Method 
 The data used were obtained from the baseline visit (between 2014 and 2018) of the Children's Health Study, which contained 158 participants aging from 17 to 22 years old. The 24-hour dietary recall was used to obtain the food items that participants consumed and to further calculate the UPF consumption percentage (UPF%), which equaled to the UPF consumption amount in grams divided by total food consumption amount in grams. A total of 155 participants had appropriate UPF% were included in the study. After exclude participants who did not have T2DM related variables and implausible blood glucose levels, a total of 153 participants were being studied. 
 Demographic variables, BMI, UPF%, and T2DM related variables (fasting glucose, blood glucose after 120 minutes, and HbA1c) were included in this particular study. 
 
@@ -89,31 +89,26 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
   labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI") +
   geom_smooth(method = lm, se = FALSE)
 
-fig2 <- 
-ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
-  geom_point() +
-  labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose") + 
-  geom_smooth(method = lm, se = FALSE)
+fig2 <- vars %>%
+  ggplot(aes(x = BMI_cont, fill = UPF_quart)) +
+  geom_histogram(position = "identity", alpha = 0.5) +
+  labs(title = "Fig2: BMI by UPF Quartiles", x = "BMI", fill = "UPF Quartile")
 
-fig3 <- 
-ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
-  geom_point() +
-  labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes") +
-  geom_smooth(method = lm, se = FALSE)
-
-fig4 <- vars %>%
+fig3 <- vars %>%
   ggplot(aes(x = UPF_BMI, fill = UPF_quart)) +
   geom_bar() +
-  labs(title = "Fig4: UPF binary and BMI combined by UPF Quartile", x = "UPF_BMI", fill = "UPF Quartile")
+  labs(title = "Fig3: UPF binary and BMI combined by UPF Quartiles", x = "UPF_BMI", fill = "UPF Quartile")
 ```
 
 <br>
 
 ## Third Step {.tabset}
 
-I created tabs to display each figure using function ggplotly.
+I created tabs to display each figure using the library ggplotly.
 
-Figure 1 to 3 show UPF% vs BMI, fasting glucose, and blood glucose after 120 minutes correspondingly. None of the plots show a trend of UPF% on those variables interested in. The barchart Figure 4 shows in another way that most subjects consumed low amount of UPFs were either overweight or obese. 
+The scatterplot Figure1 shows the association between UPF% and BMI. The plot does not show a trend of UPF% on BMI. 
+The histogram Figure2 BMI by UPF% shows that subjects who consumed 0-25% UPF had a pattern with right skewed, while subjects who consumed greater than 25% UPF showed no specific pattern. 
+The barchart Figure3 shows in another way that most subjects consumed low amount of UPFs were either overweight or obese. 
 
 ### Fig1
 ```{r fig1}
@@ -130,12 +125,7 @@ ggplotly(fig2)
 ggplotly(fig3)
 ```
 
-### Fig4
-```{r fig4}
-ggplotly(fig4)
-```
-
 <br>
 
 ## Conclusion
-Based on the above data exploration and graphs, no clear pattern shows that UPF consumption is associated with obesity or T2DM, indicated by BMI and glucose related variables. One reason can be the number of participants is limited. 
+Based on the above data exploration and graphs, no clear pattern shows that UPF consumption is associated with obesity, indicated by BMI. One reason can be the number of participants is limited. 
