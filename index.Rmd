@@ -97,6 +97,11 @@ fig3 <-
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
   geom_point() +
   labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes")
+
+fig4 <- vars %>%
+  ggplot(aes(x = UPF_BMI, fill = UPF_quart)) +
+  geom_bar() +
+  labs(title = "Fig4: UPF binary and BMI combined by UPF Quartile", x = "UPF_BMI", fill = "UPF Quartile")
 ```
 
 <br>
@@ -105,7 +110,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) +
 
 I created tabs to display each figure using function ggplotly.
 
-Figure 1 to 3 show UPF% vs BMI, fasting glucose, and blood glucose after 120 minutes correspondingly. None of the plots show a trend of UPF% on those variables interested in. 
+Figure 1 to 3 show UPF% vs BMI, fasting glucose, and blood glucose after 120 minutes correspondingly. None of the plots show a trend of UPF% on those variables interested in. The barchart Figure 4 shows in another way that most subjects consumed low amount of UPFs were either overweight or obese. 
 
 ### Fig1
 ```{r fig1}
@@ -122,4 +127,14 @@ ggplotly(fig2)
 ggplotly(fig3)
 ```
 
+### Fig4
+```{r fig4}
+ggplotly(fig4)
+```
+
 ## {-}
+
+<br>
+
+## Conclusion:
+Based on the above data exploration and graphs, no clear pattern shows that UPF consumption is associated with obesity or T2DM. One reason can be the number of participants is limited. 
