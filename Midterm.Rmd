@@ -159,15 +159,18 @@ Figure 1 to 3 shows UPF% vs BMI, fasting glucose, and blood glucose after 120 mi
 
 ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
   geom_point() +
-  labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI")
+  labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI") + 
+  geom_smooth(method = lm, se = FALSE)
 
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_point() +
-  labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose")
+  labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose") + 
+  geom_smooth(method = lm, se = FALSE)
 
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
   geom_point() +
-  labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes")
+  labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes") +
+  geom_smooth(method = lm, se = FALSE)
 ```
 
 Figure 4 fasting glucose by UPF quartiles shows that most subjects consumed 0-25% UPF and the second most subjects consumed 25-50% UPF. However, both UPF amounts consumption show no pattern for fasting flucose, which is also not normally distributed. This figure does not show any association between fasting glucose and UPF consumption. 

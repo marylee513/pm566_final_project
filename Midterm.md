@@ -365,5 +365,5 @@ vars %>%
 ![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-4.png)<!-- -->
 
 Conclusion: Based on the above data exploration and graphs, no clear
-pattern shos that UPF consumption is associated with obesity or T2DM.
-This might because most participants recruited that much UPF.
+pattern shows that UPF consumption is associated with obesity or T2DM.
+One reason can be the number of participants is limited.
