@@ -74,13 +74,11 @@ fig2 <-
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_point() +
   labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose")
-ggplotly(fig2)
 
 fig3 <- 
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
   geom_point() +
   labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes")
-ggplotly(fig3)
 ```
 
 <br>
@@ -89,6 +87,8 @@ ggplotly(fig3)
 
 Create tabs to display each figure
 
+Figure 1 to 3 shows UPF% vs BMI, fasting glucose, and blood glucose after 120 minutes correspondingly. None of the plots show a trend of UPF% on those variables interested in. 
+
 ### Fig1
 ```{r fig1}
 ggplotly(fig1)
@@ -96,12 +96,12 @@ ggplotly(fig1)
 
 ### Fig2
 ```{r fig2}
-fig2
+ggplotly(fig2)
 ```
 
 ### Fig3
 ```{r fig3}
-fig3
+ggplotly(fig3)
 ```
 
 ## {-}
