@@ -232,24 +232,33 @@ UPF% on those variables interested in.
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
   geom_point() +
-  labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI")
+  labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI") + 
+  geom_smooth(method = lm, se = FALSE)
 ```
+
+    ## `geom_smooth()` using formula 'y ~ x'
 
 ![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-1.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_point() +
-  labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose")
+  labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose") + 
+  geom_smooth(method = lm, se = FALSE)
 ```
+
+    ## `geom_smooth()` using formula 'y ~ x'
 
 ![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-2.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
   geom_point() +
-  labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes")
+  labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes") +
+  geom_smooth(method = lm, se = FALSE)
 ```
+
+    ## `geom_smooth()` using formula 'y ~ x'
 
 ![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-3.png)<!-- -->
 

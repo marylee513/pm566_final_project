@@ -7,7 +7,7 @@ navbar:
     - text: "Final Project"
       href: index.html
     - text: "HW5"  
-      hred: hw5.html
+      href: hw5.html
 output:
   html_document:
     theme: cosmo
