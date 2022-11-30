@@ -9,3 +9,57 @@ output:
 
 
 This is my PM566 Final Project website.
+
+
+#Setup
+```{r, setup, message=FALSE, echo=FALSE, warning=FALSE}
+library(readxl)
+library(plyr)
+library(dplyr)
+library(skimr)
+library(ggplot2)
+library(plotly)
+library(data.table)
+```
+
+#Run Data
+```{r, setup, message=FALSE, echo=FALSE, warning=FALSE}
+# Initialize code chunk options
+
+#error below
+
+#opts_chunk$set(
+#  warning = FALSE,
+#  message = FALSE,
+#  eval=TRUE,
+#  echo = TRUE,
+#  cache = FALSE,
+#  fig.width = 7, 
+#  fig.align = 'center',
+#  fig.asp = 0.618,
+#  out.width = "700px")
+```
+
+```{r}
+source("Midterm.R")
+
+
+
+```
+
+
+#Display Interactive Figures
+```{r, echo=FALSE}
+## Showcasing plots {.tabset}
+### Tab 1
+
+p1_scatter #<name of the plot>
+
+### Tab 2
+p2_scatter #<name of the plot>
+
+### Tab 3
+p3_scatter #<name of the plot>
+```
+
+
