@@ -235,7 +235,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
   labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI")
 ```
 
-<img src="Midterm_files/figure-gfm/scatterplots of UPF_cont vs BMI_cont, Gluc_Fasting, Gluc_120min-1.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-1.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
@@ -243,7 +243,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) +
   labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose")
 ```
 
-<img src="Midterm_files/figure-gfm/scatterplots of UPF_cont vs BMI_cont, Gluc_Fasting, Gluc_120min-2.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-2.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
@@ -251,7 +251,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) +
   labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes")
 ```
 
-<img src="Midterm_files/figure-gfm/scatterplots of UPF_cont vs BMI_cont, Gluc_Fasting, Gluc_120min-3.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-3.png)<!-- -->
 
 Figure 4 fasting glucose by UPF quartiles shows that most subjects
 consumed 0-25% UPF and the second most subjects consumed 25-50% UPF.
@@ -271,7 +271,9 @@ vars %>%
   labs(title = "Fig4: Fasting Glucose by UPF Quartiles", x = "Fasting Glucose", fill = "UPF")
 ```
 
-<img src="Midterm_files/figure-gfm/histogram, glu-fasting/120mins by UPF_quart-1.png" width="700px" style="display: block; margin: auto;" />
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](Midterm_files/figure-gfm/histogram,%20glu-fasting/120mins%20by%20UPF_quart-1.png)<!-- -->
 
 ``` r
 vars %>%
@@ -280,7 +282,9 @@ vars %>%
   labs(title = "Fig5: Blood Glucose after 120mins by UPF Quartiles", x = "Blood Glucose after 120mins", fill = "UPF")
 ```
 
-<img src="Midterm_files/figure-gfm/histogram, glu-fasting/120mins by UPF_quart-2.png" width="700px" style="display: block; margin: auto;" />
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](Midterm_files/figure-gfm/histogram,%20glu-fasting/120mins%20by%20UPF_quart-2.png)<!-- -->
 
 Figure 6 BMI by UPF consumption shows that subjects who consumed 0-25%
 UPF had a pattern with right skewed, while subjects who comsumed greater
@@ -293,7 +297,9 @@ vars %>%
   labs(title = "Fig6: BMI by UPF Quartiles", x = "BMI", fill = "UPF")
 ```
 
-<img src="Midterm_files/figure-gfm/histogram, BMI by UPF quartiles-1.png" width="700px" style="display: block; margin: auto;" />
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](Midterm_files/figure-gfm/histogram,%20BMI%20by%20UPF%20quartiles-1.png)<!-- -->
 
 The barchart Figure 7 shows in another way that most subjects consumed
 low amount of UPFs were either overweight or obese.
@@ -305,7 +311,7 @@ vars %>%
   labs(title = "Fig7: UPF binary and BMI combined by UPF Quartile", x = "UPF_BMI", fill = "UPF Quartile")
 ```
 
-<img src="Midterm_files/figure-gfm/barchart, UPF_BMI by UPF_quart, cont-1.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/barchart,%20UPF_BMI%20by%20UPF_quart,%20cont-1.png)<!-- -->
 
 Figure 8 to Figure 11 are the statistical summary graphs of fasting
 glucose or blood glucose after 120 minutes by UPF quartiles of BMI.
@@ -320,7 +326,7 @@ vars %>%
   labs(title = "Fig8: Statistical Summary of Fasting GLucose by UPF Quartiles", x = "UPF Quartiles", y = "Fasting Glucose")
 ```
 
-<img src="Midterm_files/figure-gfm/statistical summary graph, glu-fasting/120mins by UPF_quart and BMI-1.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-1.png)<!-- -->
 
 ``` r
 vars %>%
@@ -332,7 +338,7 @@ vars %>%
   labs(title = "Fig9: Statistical Summary of Fasting GLucose by UPF Quartiles", x = "UPF Quartiles", y = "Glucose after 120mins")
 ```
 
-<img src="Midterm_files/figure-gfm/statistical summary graph, glu-fasting/120mins by UPF_quart and BMI-2.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-2.png)<!-- -->
 
 ``` r
 vars %>%
@@ -344,7 +350,7 @@ vars %>%
   labs(title = "Fig10: Statistical Summary of Fasting GLucose by UPF Quartiles", x = "BMI", y = "Fasting Glucose")
 ```
 
-<img src="Midterm_files/figure-gfm/statistical summary graph, glu-fasting/120mins by UPF_quart and BMI-3.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-3.png)<!-- -->
 
 ``` r
 vars %>%
@@ -356,7 +362,7 @@ vars %>%
   labs(title = "Fig11: Statistical Summary of Fasting Glucose by UPF Quartiles", x = "BMI", y = "Glucose after 120mins")
 ```
 
-<img src="Midterm_files/figure-gfm/statistical summary graph, glu-fasting/120mins by UPF_quart and BMI-4.png" width="700px" style="display: block; margin: auto;" />
+![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-4.png)<!-- -->
 
 Conclusion: Based on the above data exploration and graphs, no clear
 pattern shos that UPF consumption is associated with obesity or T2DM.
