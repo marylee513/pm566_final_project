@@ -13,11 +13,16 @@ This is my PM566 Final Project website. Homework 5 is shortened part of it.
 
 The pdf version of the Final Project can be found at: https://github.com/marylee513/pm566_final_project/blob/main/PM566%20Final%20Project.pdf
 
-Introduction: 
-In the United States, more than half of the total dietary energy consumption has been composed by ultra-processed foods (UPFs). Most UPFs are calorie-dense and high in sugar, salt, and unhealthy fats, while low in protein, vitamins, and minerals. Studies have demonstrated that the increased consumption of UPFs could result in a poor nutritional quality of the overall diet and high chances of developing chronic diseases. Therefore, the aim of the study focuses on exploring the association between UPF consumption and type 2 diabetes (T2DM) and obesity among youth. 
+<br>
+
+# Is Ultra-Processed Food Consumption Associated with Obesity among Young Adults? 
 
 <br>
 
+## Introduction: 
+In the United States, more than half of the total dietary energy consumption has been composed by ultra-processed foods (UPFs). Most UPFs are calorie-dense and high in sugar, salt, and unhealthy fats, while low in protein, vitamins, and minerals. Studies have demonstrated that the increased consumption of UPFs could result in a poor nutritional quality of the overall diet and high chances of developing chronic diseases. Therefore, the aim of the study focuses on exploring the association between UPF consumption and  obesity and type 2 diabetes (T2DM) among young adults. 
+
+<br>
 ```{r setup, message=FALSE, echo=FALSE, warning=FALSE}
 library(readxl)
 library(plyr)
@@ -49,7 +54,6 @@ opts_chunk$set(
   font-size: 10px;
 }
 ```
-
 <br>
 
 ## First Step
