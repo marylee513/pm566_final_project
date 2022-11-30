@@ -238,7 +238,18 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-1.png)<!-- -->
+![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-1.png)<!-- -->
+
+``` r
+ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
+  geom_line () +
+  geom_smooth () +
+  labs(title = "Fig2: Smooth the lineplot of UPF vs. BMI", x = "UPF%", y = "BMI") 
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+
+![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-2.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
@@ -249,7 +260,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) +
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-2.png)<!-- -->
+![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-3.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
@@ -260,7 +271,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) +
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-3.png)<!-- -->
+![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-4.png)<!-- -->
 
 Figure 4 fasting glucose by UPF quartiles shows that most subjects
 consumed 0-25% UPF and the second most subjects consumed 25-50% UPF.
