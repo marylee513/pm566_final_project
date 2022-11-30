@@ -4,8 +4,10 @@ output_dir: "."
 navbar:
   title: "566_FinalProject_YL"
   left:
-    - text: "Home"
+    - text: "Final Project"
       href: index.html
+    - text: "HW5"  
+      hred: hw5.html
 output:
   html_document:
     theme: cosmo
