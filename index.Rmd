@@ -11,6 +11,8 @@ output:
 
 This is my PM566 Final Project website.
 
+The pdf version of the Final Project can be found at: https://github.com/marylee513/pm566_final_project/blob/main/PM566%20Final%20Project.pdf
+
 Introduction: 
 In the United States, more than half of the total dietary energy consumption has been composed by ultra-processed foods (UPFs). Most UPFs are calorie-dense and high in sugar, salt, and unhealthy fats, while low in protein, vitamins, and minerals. Studies have demonstrated that the increased consumption of UPFs could result in a poor nutritional quality of the overall diet and high chances of developing chronic diseases. Therefore, the aim of the study focuses on exploring the association between UPF consumption and type 2 diabetes (T2DM) and obesity among youth. 
 
@@ -52,7 +54,7 @@ opts_chunk$set(
 
 ## First Step
 
-Firstly, I sourced codes from "Midterm.R"
+Firstly, I sourced codes from "Midterm.R".
 
 ```{r load-data}
 source("Midterm.R")
@@ -62,7 +64,7 @@ source("Midterm.R")
 
 ## Second Step
 
-Secondly, I used the function plotly in order to sho figures
+Secondly, I copied and pasted codes needed from source.
 
 ```{r fig1 to fig3}
 fig1 <- 
@@ -85,7 +87,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) +
 
 ## Third Step {.tabset}
 
-Create tabs to display each figure
+I created tabs to display each figure using function ggplotly.
 
 Figure 1 to 3 shows UPF% vs BMI, fasting glucose, and blood glucose after 120 minutes correspondingly. None of the plots show a trend of UPF% on those variables interested in. 
 
