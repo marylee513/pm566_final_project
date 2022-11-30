@@ -69,7 +69,6 @@ fig1 <-
 ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
   geom_point() +
   labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI")
-ggplotly(fig1)
 
 fig2 <- 
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
@@ -92,7 +91,7 @@ Create tabs to display each figure
 
 ### Fig1
 ```{r fig1}
-fig1
+ggplotly(fig1)
 ```
 
 ### Fig2
@@ -105,3 +104,4 @@ fig2
 fig3
 ```
 
+## {-}
