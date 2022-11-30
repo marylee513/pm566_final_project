@@ -22,6 +22,15 @@ The pdf version of the Final Project can be found at: https://github.com/marylee
 ## Introduction: 
 In the United States, more than half of the total dietary energy consumption has been composed by ultra-processed foods (UPFs). Most UPFs are calorie-dense and high in sugar, salt, and unhealthy fats, while low in protein, vitamins, and minerals. Studies have demonstrated that the increased consumption of UPFs could result in a poor nutritional quality of the overall diet and high chances of developing chronic diseases. Therefore, the aim of the study focuses on exploring the association between UPF consumption and  obesity and type 2 diabetes (T2DM) among young adults. 
 
+## Method: 
+The data used were obtained from the baseline visit (between 2014 and 2018) of the Children's Health Study, which contained 158 participants aging from 17 to 22 years old. The 24-hour dietary recall was used to obtain the food items that participants consumed and to further calculate the UPF consumption percentage (UPF%), which equaled to the UPF consumption amount in grams divided by total food consumption amount in grams. A total of 155 participants had appropriate UPF% were included in the study. After exclude participants who did not have T2DM related variables and implausible blood glucose levels, a total of 153 participants were being studied. 
+Demographic variables, BMI, UPF%, and T2DM related variables (fasting glucose, blood glucose after 120 minutes, and HbA1c) were included in this particular study. 
+
+<br>
+
+## Ultra-Processed Food Definition and Classification
+Ultra-processed foods (UPFs) are defined as food items that go through multiple manipulated process before people purchase or eat them. A total of 1167 food items (including ingredients) were collected at baseline visit and a total of 807 food items were collected were collected at follow-up visit using the 24-hour dietary recalls (24HRs). Two reviewers conducted following two processes independently. Firstly, reviewers used NOVA classification to group food items into 4 groups: unprocessed and minimally processed foods, processed culinary ingredients, processed foods, and ultra-processed foods (UPFs). Secondly, reviewers grouped the first 3 groups into non-UPFs group, so only two groups were resulted. After grouping, reviewers had disagreements on food item classification, reviewers share own perspectives to seek an agreement. In general, UPF classification criteria were as following: the major ingredient of a food item; how the food is made in the U.S. normally; the way most people get the food – purchase from a grocery store or homemade. 
+
 <br>
 ```{r setup, message=FALSE, echo=FALSE, warning=FALSE}
 library(readxl)
