@@ -30,6 +30,9 @@ names(vars)[8] <- "Gluc_Fasting"
 names(vars)[9] <- "Gluc_120min"
 names(vars)[10] <- "HbA1C"
 
+vars$Male <- as.factor(vars$Male)
+vars$Male <- revalue(vars$Male, c("0" = "Female", "1" = "Male"))
+
 vars <- vars %>%
   filter(!is.na(Diabetes_cat)) %>%
   filter(!is.na(Gluc_Fasting)) %>%
