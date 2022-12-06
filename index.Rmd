@@ -139,5 +139,3 @@ ggplotly(fig4)
 
 ## Conclusion
 Based on the above data exploration and graphs, no clear pattern shows that UPF consumption is associated with obesity, indicated by BMI. One reason can be the number of participants is limited. 
-
-### suggestions: add sex as another variable to explore the association between UPF consumption and obesity; use UPF cut-off 50 instead of 75 to create binary UPF variables

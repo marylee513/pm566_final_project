@@ -49,7 +49,6 @@ vars$UPF_quart <- cut(vars$UPFpercentage_mean,
 vars$UPF_cat <- cut(vars$UPFpercentage_mean,
                              breaks=c(0, 50, 100),
                              labels=c("0", "1"))
-
 ```
 
 Appropriate names of variables were given to better view the dataset. 

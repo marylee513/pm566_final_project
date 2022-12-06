@@ -1,7 +1,7 @@
 Midterm
 ================
 Yiping Li
-2022-11-30
+2022-12-05
 
 ``` r
 library(readxl)
@@ -78,7 +78,7 @@ vars$UPF_quart <- cut(vars$UPFpercentage_mean,
                           labels=c("1", "2", "3", "4"))
 
 vars$UPF_cat <- cut(vars$UPFpercentage_mean,
-                             breaks=c(0, 75, 100),
+                             breaks=c(0, 50, 100),
                              labels=c("0", "1"))
 ```
 
@@ -147,13 +147,13 @@ table1 <- vars %>%
     Gluc_Fasting_min = min(Gluc_Fasting),
     Gluc_Fasting_max = max(Gluc_Fasting),
     Gluc_120min_min = min(Gluc_120min),
-    GLuc_120min_max = max(Gluc_120min),
+    Gluc_120min_max = max(Gluc_120min),
     Gluc_num = n(),
   )
 knitr::kable(table1)
 ```
 
-| UPF_quart | Gluc_Fasting_min | Gluc_Fasting_max | Gluc_120min_min | GLuc_120min_max | Gluc_num |
+| UPF_quart | Gluc_Fasting_min | Gluc_Fasting_max | Gluc_120min_min | Gluc_120min_max | Gluc_num |
 |:----------|-----------------:|-----------------:|----------------:|----------------:|---------:|
 | 1         |               76 |              119 |              55 |             208 |      105 |
 | 2         |               74 |              110 |              70 |             200 |       43 |
@@ -180,8 +180,8 @@ knitr::kable(table2)
 
 | UPF_cat | Gluc_Fasting_min | Gluc_Fasting_max | Gluc_120min_min | GLuc_120min_max | Gluc_num |
 |:--------|-----------------:|-----------------:|----------------:|----------------:|---------:|
-| 0       |               74 |              119 |              55 |             208 |      152 |
-| 1       |               91 |               91 |             135 |             135 |        1 |
+| 0       |               74 |              119 |              55 |             208 |      148 |
+| 1       |               76 |               95 |              99 |             135 |        5 |
 
 Table 3 shows the minimum and the maximum fasting glucose and blood
 glucose after 120 minutes, and the number of subjects by BMI.
@@ -220,10 +220,11 @@ knitr::kable(table4)
 
 | UPF_BMI               | Group_num |
 |:----------------------|----------:|
-| High UPF Overweight   |         1 |
+| High UPF Obese        |         2 |
+| High UPF Overweight   |         3 |
 | Low UPF Normal Weight |        24 |
-| Low UPF Obese         |        56 |
-| Low UPF Overweight    |        72 |
+| Low UPF Obese         |        54 |
+| Low UPF Overweight    |        70 |
 
 Figure 1 to 3 shows UPF% vs BMI, fasting glucose, and blood glucose
 after 120 minutes correspondingly. None of the plots show a trend of
@@ -254,13 +255,24 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_point() +
-  labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose") + 
+  labs(title = "Fig3: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose") + 
   geom_smooth(method = lm, se = FALSE)
 ```
 
     ## `geom_smooth()` using formula 'y ~ x'
 
 ![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-3.png)<!-- -->
+
+``` r
+ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
+  geom_line () +
+  geom_smooth () +
+  labs(title = "Fig4: Smooth the lineplot of UPF vs. Fasting Glucose", x = "UPF%", y = "BMI") 
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+
+![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-4.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
@@ -271,7 +283,7 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) +
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-4.png)<!-- -->
+![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-5.png)<!-- -->
 
 Figure 4 fasting glucose by UPF quartiles shows that most subjects
 consumed 0-25% UPF and the second most subjects consumed 25-50% UPF.
