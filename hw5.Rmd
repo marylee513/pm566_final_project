@@ -73,7 +73,7 @@ opts_chunk$set(
 Firstly, I sourced codes from "Midterm.R".
 
 ```{r load-data}
-source("Midterm.R")
+source("Final.R")
 ```
 
 <br>

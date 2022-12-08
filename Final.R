@@ -12,11 +12,11 @@ subsetmetachem <- metaair[myvars]
 
 vars <- merge(subsetmetachem, UPFMean_grams)
 
-vars$UPF_quart <- cut(vars$UPFpercentage_mean,
+vars$UPF_cat <- cut(vars$UPFpercentage_mean,
                       breaks=c(0, 25, 50, 75, 100),
                       labels=c("1", "2", "3", "4"))
 
-vars$UPF_cat <- cut(vars$UPFpercentage_mean,
+vars$UPF_binary <- cut(vars$UPFpercentage_mean,
                     breaks=c(0, 75, 100),
                     labels=c("0", "1"))
 
@@ -42,12 +42,12 @@ vars <- vars %>%
 
 vars <- vars %>%
   mutate(UPF_BMI = factor(
-    case_when(UPF_cat == 0 & BMI_cat == "Normal" ~ "Low UPF Normal Weight",
-              UPF_cat == 0 & BMI_cat == "Overweight" ~ "Low UPF Overweight",
-              UPF_cat == 0 & BMI_cat == "Obese" ~ "Low UPF Obese",
-              UPF_cat == 1 & BMI_cat == "Normal" ~ "High UPF Normal Weight",
-              UPF_cat == 1 & BMI_cat == "Overweight" ~ "High UPF Overweight",
-              UPF_cat == 1 & BMI_cat == "Obese" ~ "High UPF Obese")
+    case_when(UPF_binary == 0 & BMI_cat == "Normal" ~ "Low UPF Normal Weight",
+              UPF_binary == 0 & BMI_cat == "Overweight" ~ "Low UPF Overweight",
+              UPF_binary == 0 & BMI_cat == "Obese" ~ "Low UPF Obese",
+              UPF_binary == 1 & BMI_cat == "Normal" ~ "High UPF Normal Weight",
+              UPF_binary == 1 & BMI_cat == "Overweight" ~ "High UPF Overweight",
+              UPF_binary == 1 & BMI_cat == "Obese" ~ "High UPF Obese")
   ))
 
 vars<- vars %>%

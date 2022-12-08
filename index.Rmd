@@ -15,23 +15,19 @@ The pdf version of the Final Project can be found at: https://github.com/marylee
 
 <br>
 
-# Is Ultra-Processed Food Consumption Associated with Obesity among Young Adults? 
-
-<br>
-
 ## Introduction 
-In the United States, more than half of the total dietary energy consumption has been composed by ultra-processed foods (UPFs). Most UPFs are calorie-dense and high in sugar, salt, and unhealthy fats, while low in protein, vitamins, and minerals. Studies have demonstrated that the increased consumption of UPFs could result in a poor nutritional quality of the overall diet and high chances of developing chronic diseases. Therefore, the aim of the study focuses on exploring the association between UPF consumption and  obesity and type 2 diabetes (T2DM) among young adults. 
+In the United States, more than half of the total dietary energy consumption has been composed by ultra-processed foods (UPFs). Most UPFs are calorie-dense and high in sugar, salt, and unhealthy fats, while low in protein, vitamins, and minerals. Studies have demonstrated that the increased consumption of UPFs could result in a poor nutritional quality of the overall diet and high chances of developing chronic diseases. Therefore, the aim of the study focuses on exploring the association between UPF consumption and obesity, which is the primary study interest, and type 2 diabetes (T2DM) among young adults, using data obtained from the Children’s Health Study (CHS).
 
 <br>
 
 ## Method 
-The data used were obtained from the baseline visit (between 2014 and 2018) of the Children's Health Study, which contained 158 participants aging from 17 to 22 years old. The 24-hour dietary recall was used to obtain the food items that participants consumed and to further calculate the UPF consumption percentage (UPF%), which equaled to the UPF consumption amount in grams divided by total food consumption amount in grams. A total of 155 participants had appropriate UPF% were included in the study. After exclude participants who did not have T2DM related variables and implausible blood glucose levels, a total of 153 participants were being studied. 
-Demographic variables, BMI, UPF%, and T2DM related variables (fasting glucose, blood glucose after 120 minutes, and HbA1c) were included in this particular study. 
+UPF Classification: 
+In this study, UPFs are defined as food items that go through multiple manipulated process before people purchase or eat them. A total of 1167 food items (including ingredients) were collected at baseline visit and a total of 807 food items were collected were collected at follow-up visit using the 24-hour dietary recalls (24HRs). Two reviewers conducted following two processes independently. Firstly, reviewers used NOVA classification to group food items into 4 groups: unprocessed and minimally processed foods, processed culinary ingredients, processed foods, and ultra-processed foods (UPFs). Secondly, reviewers grouped the first 3 groups into non-UPFs group, so only two groups were resulted. After grouping, reviewers had disagreements on food item classification, reviewers share own perspectives to seek an agreement. In general, UPF classification criteria were as following: the major ingredient of a food item; how the food is made in the U.S. normally; the way most people get the food – purchase from a grocery store or homemade.
 
 <br>
 
-## Ultra-Processed Food Definition and Classification
-Ultra-processed foods (UPFs) are defined as food items that go through multiple manipulated process before people purchase or eat them. A total of 1167 food items (including ingredients) were collected at baseline visit and a total of 807 food items were collected were collected at follow-up visit using the 24-hour dietary recalls (24HRs). Two reviewers conducted following two processes independently. Firstly, reviewers used NOVA classification to group food items into 4 groups: unprocessed and minimally processed foods, processed culinary ingredients, processed foods, and ultra-processed foods (UPFs). Secondly, reviewers grouped the first 3 groups into non-UPFs group, so only two groups were resulted. After grouping, reviewers had disagreements on food item classification, reviewers share own perspectives to seek an agreement. In general, UPF classification criteria were as following: the major ingredient of a food item; how the food is made in the U.S. normally; the way most people get the food – purchase from a grocery store or homemade. 
+Data Analysis: 
+The data used were obtained from the baseline visit (between 2014 and 2018) of the CHS, which contained 158 participants aging from 17 to 22 years old. The 24-hour dietary recall was used to obtain the food items that participants consumed and to further calculate the UPF consumption percentage (UPF%). The inclusion criteria of participants were successfully completing the 24-hour dietary recall, BMI measurement, and glucose measurements. UPF% equaled to the UPF consumption amount in grams divided by total food consumption amount in grams. Demographic variables, body mass index (BMI), UPF%, and T2DM related variables (fasting glucose, blood glucose after 120 minutes, and HbA1c) were included in this study. BMI was used as the reference of obesity, and fasting glucose and blood glucose after 120 minutes were used as references of T2DM. 
 
 <br>
 ```{r setup, message=FALSE, echo=FALSE, warning=FALSE}
@@ -67,10 +63,10 @@ opts_chunk$set(
 ```
 <br>
 
-## Data Analysis and Visualization of Primary Research Interest (Obesity)
+## Visualization of Primary Research Interest (Obesity)
 
 ```{r load-data}
-source("Midterm.R")
+source("Final.R")
 ```
 
 ```{r fig1 to fig3}
@@ -79,31 +75,22 @@ fig1 <- ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
   labs(title = "Fig1: Scatterplot of UPF vs. BMI", x = "UPF%", y = "BMI") +
   geom_smooth(method = lm, se = FALSE)
 
-fig2 <- ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
-  geom_line () +
-  geom_smooth () +
-  labs(title = "Fig2: Smooth the lineplot of UPF vs. BMI", x = "UPF%", y = "BMI") 
-
-fig3 <- vars %>%
+fig2 <- vars %>%
   ggplot(aes(x = BMI_cont, fill = as.factor(Male))) +
   geom_histogram(position = "identity", alpha = 0.5) +
-  labs(title = "Fig3: BMI by Sex", x = "BMI", fill = "Sex")
+  labs(title = "Fig2: BMI by Sex", x = "BMI", fill = "Sex")
 
-fig4 <- vars %>%
-  ggplot(aes(x = UPF_BMI, fill = UPF_quart)) +
+fig3 <- vars %>%
+  ggplot(aes(x = UPF_BMI, fill = UPF_cat)) +
   geom_bar() +
-  labs(title = "Fig4: UPF binary and BMI combined by UPF Quartiles", x = "UPF_BMI", fill = "UPF Quartile")
+  labs(title = "Fig3: UPF binary and BMI combined by UPF Quartiles", x = "UPF_BMI", fill = "UPF Quartile")
 ```
 
 <br>
 
-## Third Step {.tabset}
-
-I created tabs to display each figure using the library ggplotly.
-
-The scatterplot Figure1 and smoothed lineplot Figure2 show the association between UPF% and BMI. The plot does not show a trend of UPF% on BMI. 
-The histogram Figure3 BMI by UPF% shows that subjects who consumed 0-25% UPF had a pattern with right skewed, while subjects who consumed greater than 25% UPF showed no specific pattern. 
-The barchart Figure4 shows in another way that most subjects consumed low amount of UPFs were either overweight or obese. 
+Figure 1 shows no clear pattern between UPF% and BMI. 
+Figure 2, BMI by sex, shows that males have a right skewed distribution while females do not. 
+Figure 3 shows Table 4 in a visualized way, but it does not indicate any association between UPF plus BMI and UPF 4 categories.
 
 ### Fig1
 ```{r fig1}
@@ -118,11 +105,6 @@ ggplotly(fig2)
 ### Fig3
 ```{r fig3}
 ggplotly(fig3)
-```
-
-### Fig4
-```{r fig4}
-ggplotly(fig4)
 ```
 
 <br>

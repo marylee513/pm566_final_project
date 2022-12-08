@@ -1,7 +1,7 @@
-Midterm
+Final
 ================
 Yiping Li
-2022-12-05
+2022-12-06
 
 ``` r
 library(readxl)
@@ -231,7 +231,7 @@ knitr::kable(table4)
 | Low UPF Obese         |        54 |
 | Low UPF Overweight    |        70 |
 
-Figure 1 to 6 shows UPF% vs BMI, fasting glucose, and blood glucose
+Figure 1 to 3 shows UPF% vs BMI, fasting glucose, and blood glucose
 after 120 minutes correspondingly. None of the plots show a trend of
 UPF% on those variables interested in.
 
@@ -244,70 +244,85 @@ ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-1.png)<!-- -->
+![](Final_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-1.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) + 
   geom_line () +
   geom_smooth () +
-  labs(title = "Fig2: Smooth the lineplot of UPF vs. BMI", x = "UPF%", y = "BMI") 
+  labs(title = "Fig1: Smooth Lineplot of UPF vs. BMI", x = "UPF%", y = "BMI") 
 ```
 
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-2.png)<!-- -->
+![](Final_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-2.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_point() +
-  labs(title = "Fig3: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose") + 
+  labs(title = "Fig2: Scatterplot of UPF vs. Fasting Glucose", x = "UPF%", y = "Fasting Glucose") + 
   geom_smooth(method = lm, se = FALSE)
 ```
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-3.png)<!-- -->
+![](Final_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-3.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_line () +
   geom_smooth () +
-  labs(title = "Fig4: Smooth the lineplot of UPF vs. Fasting Glucose", x = "UPF%", y = "BMI") 
+  labs(title = "Fig2: Smooth Lineplot of UPF vs. Fasting Glucose", x = "UPF%", y = "BMI") 
 ```
 
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-4.png)<!-- -->
+![](Final_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-4.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_120min)) + 
   geom_point() +
-  labs(title = "Fig5: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes") +
+  labs(title = "Fig3: Scatterplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes") +
   geom_smooth(method = lm, se = FALSE)
 ```
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-5.png)<!-- -->
+![](Final_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-5.png)<!-- -->
 
 ``` r
 ggplot(vars, aes(x = UPFpercentage_mean, y = Gluc_Fasting)) + 
   geom_line () +
   geom_smooth () +
-  labs(title = "Fig6: Smooth the lineplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes") 
+  labs(title = "Fig3: Smooth Lineplot of UPF vs. Blood Glucose after 120 minutes", x = "UPF%", y = "Blood Glucose after 120 minutes") 
 ```
 
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
-![](Midterm_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-6.png)<!-- -->
+![](Final_files/figure-gfm/scatterplots%20and%20smoothed%20slineplots%20of%20UPF_cont%20vs%20BMI_cont,%20Gluc_Fasting,%20Gluc_120min-6.png)<!-- -->
 
-Figure 7 fasting glucose by UPF quartiles shows that most subjects
+Figure 4 BMI by UPF consumption shows that subjects who consumed 0-25%
+UPF had a pattern with right skewed, while subjects who comsumed greater
+than 25% UPF showed no specific pattern.
+
+``` r
+vars %>%
+  ggplot(aes(x = BMI_cont, fill = as.factor(Male))) +
+  geom_histogram(position = "identity", alpha = 0.5) +
+  labs(title = "Fig4: BMI by Sex", x = "BMI", fill = "Sex")
+```
+
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](Final_files/figure-gfm/histogram,%20BMI%20by%20UPF%20quartiles-1.png)<!-- -->
+
+Figure 5 fasting glucose by UPF quartiles shows that most subjects
 consumed 0-25% UPF and the second most subjects consumed 25-50% UPF.
 However, both UPF amounts consumption show no pattern for fasting
 flucose, which is also not normally distributed. This figure does not
 show any association between fasting glucose and UPF consumption.
 
-Figure 8 Blood Glucose after 120 minutes shows that subjects consumed
+Figure 6 Blood Glucose after 120 minutes shows that subjects consumed
 0-25% and 25-50% UPF are almost normally distributed for their blood
 glucose level after 120 minutes. However, this figure also shows no
 association between blood glucose after 120 minutes and UPF consumption.
@@ -316,101 +331,50 @@ association between blood glucose after 120 minutes and UPF consumption.
 vars %>%
   ggplot(aes(x = Gluc_Fasting, fill = as.factor(Male))) +
   geom_histogram(position = "identity", alpha = 0.5) +
-  labs(title = "Fig7: Fasting Glucose by Sex", x = "Fasting Glucose", fill = "Sex")
+  labs(title = "Fig5: Fasting Glucose by Sex", x = "Fasting Glucose", fill = "Sex")
 ```
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](Midterm_files/figure-gfm/histogram,%20glu-fasting/120mins%20by%20UPF_quart-1.png)<!-- -->
+![](Final_files/figure-gfm/histogram,%20glu-fasting/120mins%20by%20UPF_quart-1.png)<!-- -->
 
 ``` r
 vars %>%
   ggplot(aes(x = Gluc_120min, fill = as.factor(Male))) +
   geom_histogram(position = "identity", alpha = 0.5) +
-  labs(title = "Fig8: Blood Glucose after 120mins by Sex", x = "Blood Glucose after 120mins", fill = "Sex")
+  labs(title = "Fig6: Blood Glucose after 120mins by Sex", x = "Blood Glucose after 120mins", fill = "Sex")
 ```
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](Midterm_files/figure-gfm/histogram,%20glu-fasting/120mins%20by%20UPF_quart-2.png)<!-- -->
+![](Final_files/figure-gfm/histogram,%20glu-fasting/120mins%20by%20UPF_quart-2.png)<!-- -->
 
-Figure 9 BMI by UPF consumption shows that subjects who consumed 0-25%
-UPF had a pattern with right skewed, while subjects who comsumed greater
-than 25% UPF showed no specific pattern.
-
-``` r
-vars %>%
-  ggplot(aes(x = BMI_cont, fill = as.factor(Male))) +
-  geom_histogram(position = "identity", alpha = 0.5) +
-  labs(title = "Fig9: BMI by Sex", x = "BMI", fill = "Sex")
-```
-
-    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-
-![](Midterm_files/figure-gfm/histogram,%20BMI%20by%20UPF%20quartiles-1.png)<!-- -->
-
-The barchart Figure 10 shows in another way that most subjects consumed
+The barchart Figure 7 shows in another way that most subjects consumed
 low amount of UPFs were either overweight or obese.
 
 ``` r
 vars %>%
   ggplot(aes(x = UPF_BMI, fill = UPF_quart)) +
   geom_bar() +
-  labs(title = "Fig10: UPF binary and BMI combined by UPF Quartile", x = "UPF_BMI", fill = "UPF Quartile")
+  labs(title = "Fig7: UPF binary and BMI combined by UPF Quartile", x = "UPF_BMI", fill = "UPF Quartile")
 ```
 
-![](Midterm_files/figure-gfm/barchart,%20UPF_BMI%20by%20UPF_quart,%20cont-1.png)<!-- -->
+![](Final_files/figure-gfm/barchart,%20UPF_BMI%20by%20UPF_quart,%20cont-1.png)<!-- -->
 
-Figure 11 to Figure 14 are the statistical summary graphs of fasting
+Figure 8 to Figure 14 are the statistical summary graphs of fasting
 glucose or blood glucose after 120 minutes by UPF quartiles of BMI.
 
 ``` r
 vars %>%
   ggplot() +
-  stat_summary(mapping = aes(x = UPF_quart, y = Gluc_Fasting),
+  stat_summary(mapping = aes(x = BMI_cat, y = UPFpercentage_mean),
                fun.min = min,
                fun.max = max, 
                fun = median) + 
-  labs(title = "Fig11: Statistical Summary of Fasting GLucose by UPF Quartiles", x = "UPF Quartiles", y = "Fasting Glucose")
+  labs(title = "Fig8: Statistical Summary of UPF% by BMI Categories", x = "BMI", y = "UPF%")
 ```
 
-![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-1.png)<!-- -->
-
-``` r
-vars %>%
-  ggplot() +
-  stat_summary(mapping = aes(x = UPF_quart, y = Gluc_120min),
-               fun.min = min,
-               fun.max = max, 
-               fun = median) + 
-  labs(title = "Fig12: Statistical Summary of Glucose after 120mins by UPF Quartiles", x = "UPF Quartiles", y = "Glucose after 120mins")
-```
-
-![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-2.png)<!-- -->
-
-``` r
-vars %>%
-  ggplot() +
-  stat_summary(mapping = aes(x = BMI_cat, y = Gluc_Fasting),
-               fun.min = min,
-               fun.max = max, 
-               fun = median) + 
-  labs(title = "Fig13: Statistical Summary of Fasting GLucose by BMI Categories", x = "BMI", y = "Fasting Glucose")
-```
-
-![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-3.png)<!-- -->
-
-``` r
-vars %>%
-  ggplot() +
-  stat_summary(mapping = aes(x = BMI_cat, y = Gluc_120min),
-               fun.min = min,
-               fun.max = max, 
-               fun = median) + 
-  labs(title = "Fig14: Statistical Summary of Fasting Glucose by BMI Categories", x = "BMI", y = "Glucose after 120mins")
-```
-
-![](Midterm_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-4.png)<!-- -->
+![](Final_files/figure-gfm/statistical%20summary%20graph,%20glu-fasting/120mins%20by%20UPF_quart%20and%20BMI-1.png)<!-- -->
 
 Conclusion: Based on the above data exploration and graphs, no clear
 pattern shows that UPF consumption is associated with obesity or T2DM.

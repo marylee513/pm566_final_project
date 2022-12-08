@@ -2,7 +2,7 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: "PM566 FinalProject YL"
+  title: "Is Ultra-Processed Food Consumption Associated with Obesity among Young Adults? "
   left:
     - text: "Final Project"
       href: index.html
@@ -11,3 +11,6 @@ navbar:
 output:
   html_document:
     theme: cosmo
+    include: 
+      after_body: footer.html
+    ccs: styles.css
