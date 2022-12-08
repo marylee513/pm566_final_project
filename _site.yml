@@ -2,7 +2,7 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: "Is Ultra-Processed Food Consumption Associated with Obesity among Young Adults? "
+  title: "PM566"
   left:
     - text: "Final Project"
       href: index.html

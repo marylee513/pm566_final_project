@@ -9,7 +9,7 @@ output:
 
 <br>
 
-This is my PM566 Final Project website.
+This is my PM566 HW5. 
 
 The pdf version of the Final Project can be found at: https://github.com/marylee513/pm566_final_project/blob/main/PM566%20Final%20Project.pdf
 
@@ -95,12 +95,12 @@ fig2 <- ggplot(vars, aes(x = UPFpercentage_mean, y = BMI_cont)) +
   labs(title = "Fig2: Smooth the lineplot of UPF vs. BMI", x = "UPF%", y = "BMI") 
 
 fig3 <- vars %>%
-  ggplot(aes(x = BMI_cont, fill = UPF_quart)) +
+  ggplot(aes(x = BMI_cont, fill = UPF_cat)) +
   geom_histogram(position = "identity", alpha = 0.5) +
   labs(title = "Fig3: BMI by UPF Quartiles", x = "BMI", fill = "UPF Quartile")
 
 fig4 <- vars %>%
-  ggplot(aes(x = UPF_BMI, fill = UPF_quart)) +
+  ggplot(aes(x = UPF_BMI, fill = UPF_cat)) +
   geom_bar() +
   labs(title = "Fig4: UPF binary and BMI combined by UPF Quartiles", x = "UPF_BMI", fill = "UPF Quartile")
 ```

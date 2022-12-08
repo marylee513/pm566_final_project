@@ -223,7 +223,7 @@ vars %>%
 
 Figure 8 shows the primary outcome of interest BMI in regard to UPF%. Participants consumed more UPF were overweight instead of obese, suggesting no association between UPF% and obesity, indicating by BMI categories. 
 
-```{r, statistical summary graph, glu-fasting/120mins by UPF_quart and BMI}
+```{r, statistical summary graph}
 vars %>%
   ggplot() +
   stat_summary(mapping = aes(x = BMI_cat, y = UPFpercentage_mean),
