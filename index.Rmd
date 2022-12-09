@@ -1,5 +1,5 @@
 ---
-title: "Is Ultra-Processed Food Consumption Associated with Obesity among Young Adults? "
+title: "Is Ultra-Processed Food Consumption Associated with Obesity among Young Adults?"
 author: "Yiping Li"
 output:
     html_document:
